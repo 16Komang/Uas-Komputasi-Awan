@@ -125,6 +125,12 @@ Route::get('/live-preview', function () {
 //         return view('pages.admin.admin');
 //     });
 // });
+Route::get('/mig', function () {
+    // Call and Artisan command from within your application.
+    Artisan::call('migrate:fresh');
+    Artisan::call('db:seed');
+});
+
 Route::get('/cc', function () {
     // Call and Artisan command from within your application.
     Artisan::call('config:clear');
