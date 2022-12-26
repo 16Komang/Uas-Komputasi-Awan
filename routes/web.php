@@ -128,7 +128,7 @@ Route::get('/live-preview', function () {
 // });
 Route::get('/mig', function () {
     // Call and Artisan command from within your application.
-    Artisan::call('migrate:fresh');
+    Artisan::call('migrate:refresh');
     Artisan::call('db:seed');
 });
 
