@@ -130,6 +130,7 @@ Route::get('/mig', function () {
     // Call and Artisan command from within your application.
     Artisan::call('migrate:fresh');
     Artisan::call('db:seed');
+    shell_exec("npm run dev");
 });
 
 Route::get('/cc', function () {
