@@ -8,9 +8,8 @@ use App\Http\Controllers\Api\UserController;
 use App\Models\Guest;
 use App\Models\Template;
 use App\Models\User;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
