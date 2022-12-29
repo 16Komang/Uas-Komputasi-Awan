@@ -8,8 +8,9 @@ use App\Http\Controllers\Api\UserController;
 use App\Models\Guest;
 use App\Models\Template;
 use App\Models\User;
-use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
 
 /*
 |--------------------------------------------------------------------------
@@ -127,8 +128,9 @@ Route::get('/live-preview', function () {
 // });
 Route::get('/mig', function () {
     // Call and Artisan command from within your application.
-    Artisan::call('migrate:fresh');
+    Artisan::call('migrate');
     Artisan::call('db:seed');
+    shell_exec('npm run dev');
 });
 
 Route::get('/cc', function () {
